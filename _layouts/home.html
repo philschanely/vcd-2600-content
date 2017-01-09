@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<main class="page-home">
+    <h2 class="page-heading">Lessons</h2>
+    <ul class="list-unstyled list-group">
+        {% for lesson in site.lessons %}
+        <li class="list-group-item"><a class="post-link" href="{{ lesson.url | relative_url }}">{{ lesson.title | escape }}</a></li>
+        {% endfor %}
+    </ul>
+    {{ content }}
+</main>
